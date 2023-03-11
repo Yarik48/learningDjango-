@@ -1,0 +1,16 @@
+{% extends 'posts/base.html' %}
+{% load static %}
+{% block content %}
+        <div class="posts">
+                <div class="post">
+                    <h2>{{ post.object }}</h2>
+                    <h4 class="text">{{ post.text }}</h4>
+                    <p class="day">На {{ post.day }}  {{ post.date }}</p>
+                    <a class="read-post">Читать</a>
+                    {% if post.file %}
+                    <div class="file"><a href="{{ post.file.url }}">Файл</a><img src="{% static 'posts/img/screpka.png' %}" width="40"></div>
+                    {% endif %}
+                </div>
+        </div>
+
+{% endblock content %}

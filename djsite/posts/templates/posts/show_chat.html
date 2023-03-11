@@ -1,0 +1,21 @@
+{% extends 'posts/base.html' %}
+{% load posts_tags %}
+{% block content %}
+<div class="form-message">
+  <form method="post" action="{% url 'add_mes' object.id %}">
+      {% csrf_token %}
+      текст:
+      <input name="text" class="form-control"><br>
+      от кого :
+      <input name="author" class="form-control"> <br>
+      <button type="submit" class="btn btn-Success">Отправить</button>
+  </form>
+</div>
+{% get_mes as messages %}
+<div class="messages">
+    {% for m in object.messages_set.all %}
+        {{ m.text }}<br>
+      от  {{ m.author }}<br><br>
+    {% endfor %}
+</div>
+{% endblock content %}

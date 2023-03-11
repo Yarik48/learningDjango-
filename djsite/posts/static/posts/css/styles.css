@@ -1,0 +1,68 @@
+
+
+.btn-primary{
+margin:13px;
+}
+.logo{
+    font-size:30px
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.menu__ul li {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    border-radius:33px;
+}
+
+
+.btn-warning a{
+    text-decoration:none;
+    color:black;
+    border-radius:33px;
+}
+.wrapper{
+    padding:10px
+}
+.post{
+    width:100%;
+    border-radius:33px;
+    background:white;
+    border:1px solid black;
+    margin:10px 0 10px;
+    padding:15px
+
+}
+.form-control{
+    margin-top:10px
+    border-radius:33px;
+}
+.read-post{
+    text-decoration:none
+}
+
+
+
+.file{
+    float:right
+}
+
+.file img, .file a{
+    vertical-align:middle
+}
+
+.file a{
+    text-decoration:none;
+    color:black
+}
+
+.center-title{
+    margin-top:5px;
+    width:100%;
+    text-align:center
+    border-radius:33px;
+}

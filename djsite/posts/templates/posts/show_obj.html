@@ -1,0 +1,20 @@
+{% extends 'posts/base.html' %}
+P% load posts_tags %}
+{% load static %}
+{% block content %}
+        <div class="post">
+                {% for p in posts %}
+                        <div class="post">
+                     <h2>По {{ p.object }}</h2>
+                    <h3 class="text">{{ p.text }}</h3>
+                    <p class="day">На {{ p.day }}  {{ p.date }}</p>
+
+                    {% if p.file %}
+                    <div class="file"><a href="{{ p.file.url }}">Файл</a><img src="{% static 'posts/img/screpka.png' %}" width="40"></div>
+                    {% endif %}
+                    <a class="read-post" href="{% url 'post' p.pk %}">Читать</a>
+                </div>
+                {% endfor %}
+
+        </div>
+{% endblock content %}

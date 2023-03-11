@@ -1,0 +1,6 @@
+{% extends 'posts/index.html' %}
+        <div class="objects">
+            {% for object in objects %}
+                <a class="btn btn-outline-primary" href="{% url 'obj' object.pk %}">{{ object }}</a>
+            {% endfor %}
+        </div>

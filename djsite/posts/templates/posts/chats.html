@@ -1,0 +1,8 @@
+{% extends 'posts/base.html' %}
+{% load posts_tags %}
+{% block content %}
+    {% get_obj as objects %}
+    {% for object in objects %}
+                    <a class="btn btn-primary" aria-current="page" href="{% url 'show_chat' object.id %}">{{ object }}</a><br>
+    {% endfor %}
+{% endblock content %}

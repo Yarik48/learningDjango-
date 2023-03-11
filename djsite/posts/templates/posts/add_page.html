@@ -1,0 +1,14 @@
+{% extends 'posts/base.html' %}
+{% block content %}
+
+    <form method="POST" action="{% url 'add_post' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.text }}
+        {{ form.day }}
+        {{ form.date }}
+        {{ form.object }}
+        {{ form.file }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+{% endblock content %}
